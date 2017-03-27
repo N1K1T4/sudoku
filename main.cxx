@@ -2,11 +2,10 @@
 
 int main(int argc, char* argv[])
 {
-	if (argc)
+	if (argc>1)
 	{
-		char* location(argv[0]);
-		(void)location;
-		Grid sudoku;
+		char* location(argv[1]);
+		Grid sudoku(location);
 	}
 	return 0;
 }

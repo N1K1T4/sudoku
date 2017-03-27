@@ -1,2 +1,4 @@
 *.o
 sudoku_solver
+sudoku.txt
+solution.txt

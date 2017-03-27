@@ -79,11 +79,7 @@ char Cell::operator()(char val) const
 
 char Cell::pop(char val)
 {
-	if(!val)
-	{
-		this->reset();
-	}
-	else if (!this->value[0] && val<10)
+	if (val>0 && val<10 && !this->value[0])
 	{
 		this->value[(int)val]=0;
 		char zeros=0;

@@ -1,4 +1,6 @@
 #include "grid.h"
+#include <fstream>
+#include <iostream>
 
 Grid::Grid(void)
 {
@@ -24,7 +26,16 @@ Grid::Grid(Grid&& grid)
 
 Grid::Grid(char* location)
 {
-	(void)location;
+	std::fstream input(location, std::fstream::in);
+	if (input.is_open())
+	{
+		char c;
+		while (input.get(c))
+		{
+			std::cout << c << std::endl;
+		}
+		input.close();
+	}
 	this->reset();
 }
 
