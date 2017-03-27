@@ -15,6 +15,7 @@ class Cell
 		char operator()(char val) const;
 		char pop(char val);
 		void reset(void);
+		void set(char val);
 		~Cell(void);// destructor
 };
 

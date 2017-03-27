@@ -6,7 +6,7 @@
 class Grid
 {
 	private:
-		Cell board[81];
+		Cell* board;
 	public:
 		Grid(void);// default constructor
 		Grid(const Grid& grid);// copy constructor
@@ -16,6 +16,7 @@ class Grid
 		Grid& operator=(Grid&& grid);// move assignment operator
 		const Cell& operator()(int i) const;
 		char operator()(int i, int j) const;
+		const char* c_str(void) const;
 		void reset(void);
 		~Grid(void);// destructor
 };

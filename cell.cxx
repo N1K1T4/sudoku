@@ -108,6 +108,19 @@ void Cell::reset(void)
 	}
 }
 
+void Cell::set(char val)
+{
+	if (val>0 && val<10)
+	{
+		for (char val=10; val--;)
+		{
+			this->value[(int)val]=0;
+		}
+		this->value[0]=val;
+		this->value[(int)val]=val;
+	}
+}
+
 Cell::~Cell(void)
 {
 }
